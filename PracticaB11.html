@@ -92,11 +92,12 @@
             }
             Pelota.prototype.colisionesPelotas=function(){
                 for(i =0; i < pelotas.length;i++){
-                    	// Si la bola choca con otra bola desde la izquierda.
+                    
+                    // Si la bola choca con otra bola desde la izquierda.
 
-                    if( (this.left == (pelotas[i].left - this.width)) && (this.top >= (pelotas[i].top - this.height)) && (this.top <= (pelotas[i].top + this.height)) ) {
+                    if( (this.left+this.width == (pelotas[i].left)) && (this.top >= (pelotas[i].top - this.height)) && (this.top <= (pelotas[i].top + this.height)) ) {
                         this.izquierda=false;
-                            pelotas[i].izquierda=true;
+                        pelotas[i].izquierda=true;
                     }
                     // Si la bola choca con otra bola desde la derecha.
                     if( (this.left == (pelotas[i].left + this.width)) && (this.top >= (pelotas[i].left - this.height)) && (this.top <= (pelotas[i].top + this.height)) ) {
