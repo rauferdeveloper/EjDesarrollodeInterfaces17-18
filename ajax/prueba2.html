@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+   
+    <title>Document</title>
+    <script>
+        function Jugador(nombre,puntos){
+            this.nombre=nombre;
+            this.puntos=puntos;
+        }
+        window.onload=function(){
+            jugadores = new Array(4);
+
+            jugadores[0] = new Jugador("pedro",3480);
+            jugadores[1] = new Jugador("jose",3450);
+            jugadores[2] = new Jugador("angel",3420);
+            jugadores[3] = new Jugador("miguel",3430);
+
+            
+            jugadores.sort(function (jug1, jug2) {
+                return (jug1.puntos > jug2.puntos)
+            });            
+              for(var i =0; i < jugadores.length;i++){
+                alert(jugadores[i].nombre);
+           }
+
+
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+ 
+    <title>Document</title>
+    <script>
+            var numero=prompt("Dime el numero: ");
+
+            if(numero !=null||numero!=undefined){
+                if(!isNaN(numero)){
+                    for(var i =1; i <= numero; i++){
+                        if(i %3==0 && i%5==0){
+                            console.log("Fizz Buzz");
+                    
+                        }
+                        else if(i%3==0){
+                            console.log("Fizz");
+                        }else if(i % 5==0){
+                            console.log("Buzz");
+
+                        }else{
+                            console.log(i);
+                        }
+                    }
+                }
+            
+            }else{
+                alert("Introduce un numero ");
+            }
+        
+        
+       
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
